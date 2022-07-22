@@ -1,0 +1,14 @@
+package step3_loop;
+
+import java.io.*;
+import java.util.*;
+
+public class Problem_8393 {
+
+	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		System.out.println(n*(n+1)/2);
+	}
+
+}
