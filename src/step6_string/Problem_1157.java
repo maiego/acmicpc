@@ -7,14 +7,14 @@ public class Problem_1157 {
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		char[] s = br.readLine().toCharArray();
+		char[] s = br.readLine().toUpperCase().toCharArray();
 		
 		int[] cntArr = new int[26];
 		int maxv=0;
 		for (char c : s) {
-			int lowerC = (c>='a') ? c-'a'+'A' : c;
-			cntArr[lowerC-'A']++;
-			if (cntArr[lowerC-'A']>maxv) maxv=cntArr[lowerC-'A'];
+			int idx = c-'A';
+			cntArr[idx]++;
+			if (cntArr[idx]>maxv) maxv=cntArr[idx];
 		}
 		int cnt=0, maxIdx=0;
 		for (int i=0; i<26; ++i) {
