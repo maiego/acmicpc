@@ -1,19 +1,22 @@
 package step20_queue;
 
+import java.io.*;
 import java.util.*;
 
 public class Problem_18258 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
+    	StringTokenizer st = null;
         
         Deque<Integer> q = new ArrayDeque<>();
-        int n = sc.nextInt();
+        int n = Integer.parseInt(br.readLine());
         while (n-->0) {
-            String cmd = sc.next();
+            String[] line = br.readLine().split(" ");
+            String cmd = line[0];
             if (cmd.equals("push")) {
-                int x = sc.nextInt();
+            	int x = Integer.parseInt(line[1]);
                 q.add(x);
             } else if (cmd.equals("pop")) {
                 if (q.isEmpty()) {
